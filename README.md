@@ -7,10 +7,10 @@ The web service uses a MongoDB database to store data.
 The website is published with the help of render for backend an netlify for frontend.
 Because of this, Render takes a couple of minutes to show the data on the website on inital startup, creating a short waiting time.
 
-Published restaurant website: (https://pokerose.netlify.app/)
-Published Admin CMS login: (https://pokerose.netlify.app/login)
-Username: Admin
-Password: test
+### Published restaurant website: (https://pokerose.netlify.app/)
+### Published Admin CMS login: (https://pokerose.netlify.app/login)
+### Username: Admin
+### Password: test
 
 Clone the repository and run npm install to install the necessary packages. 
 
