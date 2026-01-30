@@ -56,7 +56,7 @@ async function loadDrinkMenu() {
   try {
 
     //fetch /drink with method GET
-    const response = await fetch("https://pokerose-db.onrender.com/drink", {
+    const response = await fetch("https://pokeroserestaurant.onrender.com/drink", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -98,7 +98,7 @@ async function loadDrinkMenu() {
 //function for loading food menu items
 async function loadFoodMenu() {
   try {//fetch /food with method GET
-    const response = await fetch("https://pokerose-db.onrender.com/food", {
+    const response = await fetch("https://pokeroserestaurant.onrender.com/food", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -139,7 +139,7 @@ async function loadFoodMenu() {
 async function loadOrderItems() {
 
  try {//get menu item names
-    const res = await fetch('https://pokerose-db.onrender.com/menu',
+    const res = await fetch('https://pokeroserestaurant.onrender.com/menu',
       {
         method: "GET",
         headers: {
@@ -205,7 +205,7 @@ let order = {
 }
 
 try { //send POST request with /order and order object
-  const resp = await fetch("https://pokerose-db.onrender.com/order", {
+  const resp = await fetch("https://pokeroserestaurant.onrender.com/order", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -228,7 +228,7 @@ try { //send POST request with /order and order object
 //function for getting images from server
 async function getImages() {
   try {//send GET request with /image
-    const response = await fetch("https://pokerose-db.onrender.com/image", {
+    const response = await fetch("https://pokeroserestaurant.onrender.com/image", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"

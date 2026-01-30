@@ -86,7 +86,7 @@ async function deleteDrinkItem(drinkId) {
   if (!confirmDelete) return;
 
   try { //send request /drink:_id with passed drinkId 
-    const resp = await fetch(`https://pokerose-db.onrender.com/drink/${drinkId}`, {
+    const resp = await fetch(`https://pokeroserestaurant.onrender.com/drink/${drinkId}`, {
       method: "DELETE",
       headers: { //JSON Web Token required
         "authorization": `Bearer ${localStorage.getItem("JWT_token")}`
@@ -113,7 +113,7 @@ async function deleteFoodItem(foodId) {
   if (!confirmDelete) return;
 
   try { //fetch /food_:id with passed foodId with method DELETE
-    const resp = await fetch(`https://pokerose-db.onrender.com/food/${foodId}`, {
+    const resp = await fetch(`https://pokeroserestaurant.onrender.com/food/${foodId}`, {
       method: "DELETE",
       headers: { //JSON Web Token required
         "authorization": `Bearer ${localStorage.getItem("JWT_token")}`
@@ -157,7 +157,7 @@ async function addDrinkItem(e) {
   }
 
   try { //request POST /drink  with drink object
-    const resp = await fetch("https://pokerose-db.onrender.com/drink", {
+    const resp = await fetch("https://pokeroserestaurant.onrender.com/drink", {
       method: "POST",
       headers: { //JSON Web Token required
         "Authorization": `Bearer ${localStorage.getItem("JWT_token")}`,
@@ -203,7 +203,7 @@ async function addFoodItem(e) {
   }
 
   try { //send POST request with /food and food object
-    const resp = await fetch("https://pokerose-db.onrender.com/food", {
+    const resp = await fetch("https://pokeroserestaurant.onrender.com/food", {
       method: "POST",
       headers: { //JSON Web Token required
         "Authorization": `Bearer ${localStorage.getItem("JWT_token")}`,
@@ -229,7 +229,7 @@ async function addFoodItem(e) {
 //function for loading current orders
 async function loadOrders() {
   try { //Fetch /order with method GET
-    const response = await fetch("https://pokerose-db.onrender.com/order", {
+    const response = await fetch("https://pokeroserestaurant.onrender.com/order", {
       method: "GET",
       headers: { //JSON Web Token required
         Authorization: `Bearer ${localStorage.getItem("JWT_token")}`,
@@ -289,7 +289,7 @@ async function deleteOrder(orderId) {
   if (!confirmDelete) return;
 
   try { //Fetch /order/:_ID with method DELETE
-    const resp = await fetch(`https://pokerose-db.onrender.com/order/${orderId}`, {
+    const resp = await fetch(`https://pokeroserestaurant.onrender.com/order/${orderId}`, {
       method: "DELETE",
       headers: { //JSON Web Token required
         "authorization": `Bearer ${localStorage.getItem("JWT_token")}`
@@ -333,7 +333,7 @@ async function newImage(e) {
   formData.append("image", imageEl);
 
   try { //send POST request with route /image
-    const resp = await fetch("https://pokerose-db.onrender.com/image", {
+    const resp = await fetch("https://pokeroserestaurant.onrender.com/image", {
       method: "POST",
       headers: { //requires JSON Web token
         Authorization: `Bearer ${localStorage.getItem("JWT_token")}`,
@@ -363,7 +363,7 @@ async function loadDrinkMenu() {
   try {
 
     //fetch /drink with method GET
-    const response = await fetch("https://pokerose-db.onrender.com/drink", {
+    const response = await fetch("https://pokeroserestaurant.onrender.com/drink", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -441,7 +441,7 @@ async function updateDrinkItem(e, drinkID) {
     _id: drinkID,
   }
   try {
-    const response = await fetch(`https://pokerose-db.onrender.com/drink/${drinkID}`, {
+    const response = await fetch(`https://pokeroserestaurant.onrender.com/drink/${drinkID}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -465,7 +465,7 @@ async function updateDrinkItem(e, drinkID) {
 //function for loading food menu items
 async function loadFoodMenu() {
   try {//fetch /food with method GET
-    const response = await fetch("https://pokerose-db.onrender.com/food", {
+    const response = await fetch("https://pokeroserestaurant.onrender.com/food", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -536,7 +536,7 @@ async function updateFoodItem(e, foodID) {
     _id: foodID,
   }
   try {
-    const response = await fetch(`https://pokerose-db.onrender.com/food/${foodID}`, {
+    const response = await fetch(`https://pokeroserestaurant.onrender.com/food/${foodID}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -560,7 +560,7 @@ async function updateFoodItem(e, foodID) {
 //function for getting images from server
 async function getImages() {
   try {//send GET request with /image
-    const response = await fetch("https://pokerose-db.onrender.com/image", {
+    const response = await fetch("https://pokeroserestaurant.onrender.com/image", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -607,7 +607,7 @@ async function deleteImage(imageID) {
   if (!confirmDelete) return;
 
   try { //Fetch /order/:_ID with method DELETE
-    const resp = await fetch(`https://pokerose-db.onrender.com/image/${imageID}`, {
+    const resp = await fetch(`https://pokeroserestaurant.onrender.com/image/${imageID}`, {
       method: "DELETE",
       headers: { //JSON Web Token required
         "authorization": `Bearer ${localStorage.getItem("JWT_token")}`
@@ -647,7 +647,7 @@ async function login(e) {
   }
   try {
     //send a POST request to the server with the user object
-    const resp = await fetch("https://pokerose-db.onrender.com/login", {
+    const resp = await fetch("https://pokeroserestaurant.onrender.com/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
